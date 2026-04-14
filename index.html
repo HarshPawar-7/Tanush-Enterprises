@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanush Enterprises | Premium Industrial Water Treatment</title>
+  <meta name="description" content="Tanush Enterprises provides premier industrial water treatment chemicals, boiler cooling tower solutions, and technical services tailored for chemical factories in Maharashtra.">
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  
+  <style>
+    /* Hero Section - Light Modern */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: var(--off-white);
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, rgba(248, 250, 252, 1) 50%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    
+    .hero-image-container {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45%;
+      max-width: 600px;
+      z-index: 2;
+      animation: float 6s ease-in-out infinite;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(-50%) }
+      50% { transform: translateY(-52%) }
+      100% { transform: translateY(-50%) }
+    }
+    
+    .hero-stats-bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--gray-300);
+      padding: 1.5rem 0;
+      z-index: 3;
+    }
+
+    /* Trust Bar (Infinite scroll with Images) */
+    .trust-bar {
+      background: var(--white);
+      padding: 2rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    .trust-track {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      animation: scroll 20s linear infinite;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .trust-logo-img {
+      height: 45px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: filter 0.3s;
+    }
+    
+    .trust-logo-img:hover {
+      filter: grayscale(0%) opacity(1);
+    }
+    
+    /* Quote Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--steel-light);
+    }
+    
+    .modal-close:hover {
+      color: var(--danger);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--primary-700);
+      font-size: 0.9rem;
+    }
+
+    .contact-form input, .contact-form select, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-family: var(--font-body);
+      background: var(--off-white);
+      transition: border-color 0.3s;
+    }
+    
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary-500);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-900);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    .footer-links a {
+      color: var(--steel-light);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent-teal);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      color: var(--steel-mid);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo-container">
+        <!-- SVG Logo Adjusted for Light Mode -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="var(--primary-700)" />
+          <path d="M12 28L20 12L28 28" stroke="var(--white)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <a href="/" class="logo-text">TANUSH ENTERPRISES</a>
+          <span class="logo-tagline">Industrial Water Tech</span>
+        </div>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#services" class="nav-link">Services</a>
+      </div>
+      
+      <div class="nav-contact-info">
+        <a href="tel:+919049962176" class="nav-phone">
+          <span>📞</span> 9049962176
+        </a>
+        <button class="btn btn-primary text-small trigger-quote">Get Quote →</button>
+      </div>
+
+      <button class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-image-container">
+      <img src="assets/images/hero/industrial-water.jpg" alt="Industrial Chemistry" class="hero-image" onerror="this.style.display='none'">
+    </div>
+    
+    <div class="container hero-content">
+      <div class="fade-up">
+        <span class="section-label">Est. 2016</span>
+        <h1 style="max-width: 600px; padding-top: 2rem;">Premium Industrial <span style="color: var(--primary-500);">Water Treatment</span><br>Chemicals & Services</h1>
+        <p style="max-width: 500px; font-size: 1.1rem; margin-bottom: 2.5rem; color: var(--steel-dark);">Trusted by Vinati Organics, Castrol, Asian Paints & 50+ industrial clients across Maharashtra to keep their plants running smoothly.</p>
+        
+        <div class="d-flex gap-2">
+          <button class="btn btn-primary" onclick="window.location.href='#products'">Explore Products</button>
+          <button class="btn btn-secondary trigger-quote">Get a Free Quote</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hero Stats Bar -->
+    <div class="hero-stats-bar">
+      <div class="container d-flex justify-between align-center" style="flex-wrap: wrap; gap: 1rem;">
+        <span style="color: var(--primary-900); font-family: var(--font-mono); display: flex; align-items: center; gap: 8px; font-weight: 500;">
+          <span style="color: var(--success); font-size: 1.2rem;">✓</span> Authorised Dealer: Chembond Clean Water Tech
+        </span>
+        <span style="color: var(--primary-900); font-family: var(--font-mono); display: flex; align-items: center; gap: 8px; font-weight: 500;">
+          <span style="color: var(--success); font-size: 1.2rem;">✓</span> 9+ Product Lines
+        </span>
+        <span style="color: var(--primary-900); font-family: var(--font-mono); display: flex; align-items: center; gap: 8px; font-weight: 500;">
+          <span style="color: var(--success); font-size: 1.2rem;">✓</span> 100% Certified Quality
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar (Logos from Clearbit) -->
+  <div class="trust-bar">
+    <div class="trust-track">
+      <!-- Group 1 -->
+      <img src="https://logo.clearbit.com/vinatiorganics.com" alt="Vinati Organics" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/asianpaints.com" alt="Asian Paints" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/castrol.com" alt="Castrol" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/deepaknitrite.com" alt="Deepak Novochem" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/supriyalifescience.com" alt="Supriya Lifescience" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/borosil.com" alt="Placeholder Client" class="trust-logo-img" onerror="this.style.display='none'">
+      
+      <!-- Group 2 (Duplicate for seamless loop) -->
+      <img src="https://logo.clearbit.com/vinatiorganics.com" alt="Vinati Organics" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/asianpaints.com" alt="Asian Paints" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/castrol.com" alt="Castrol" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/deepaknitrite.com" alt="Deepak Novochem" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/supriyalifescience.com" alt="Supriya Lifescience" class="trust-logo-img" onerror="this.style.display='none'">
+      <img src="https://logo.clearbit.com/borosil.com" alt="Placeholder Client" class="trust-logo-img" onerror="this.style.display='none'">
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="section bg-off-white">
+    <div class="container">
+      <div class="grid grid-2 align-center">
+        <div class="fade-up">
+          <span class="section-label">Who We Are</span>
+          <h2>Reliable Chemistry.<br>Measurable Results.</h2>
+          <p>Established in 2016, Tanush Enterprises is a premier provider of industrial water treatment chemicals, systems, and maintenance services. We specialize in enhancing operational efficiency and lowering downtime for heavy industries.</p>
+          <p>As authorized dealers for Chembond Clean Water Tech Ltd., we provide customized, precision-driven chemistry to chemical factories, pharmaceutical plants, and refineries across Maharashtra.</p>
+          <button class="btn btn-secondary trigger-quote" style="margin-top: 1rem;">Contact Us Today →</button>
+        </div>
+        
+        <div class="grid grid-2 fade-up" style="gap: 1.5rem;">
+          <div class="glass-card">
+            <div class="stat-box">
+              <span class="number" data-target="2016">0</span>
+              <span class="text-small" style="color:var(--steel-mid); font-weight: 600;">Founded</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="stat-box">
+              <span class="number" data-target="9" data-suffix="+">0</span>
+              <span class="text-small" style="color:var(--steel-mid); font-weight: 600;">Products</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="stat-box">
+              <span class="number" data-target="50" data-suffix="+">0</span>
+              <span class="text-small" style="color:var(--steel-mid); font-weight: 600;">Clients</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div class="stat-box">
+              <span class="number" data-target="100" data-suffix="%">0</span>
+              <span class="text-small" style="color:var(--steel-mid); font-weight: 600;">Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section bg-white">
+    <div class="container fade-up">
+      <div class="text-center" style="margin-bottom: 4rem;">
+        <span class="section-label justify-center">Our Portfolio</span>
+        <h2>Precision Chemical Solutions</h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="product-card">
+          <div class="icon">💧</div>
+          <h3>Water Treatment</h3>
+          <p>Complete scale, corrosion, and microbiological control for industrial water circuits.</p>
+          <button class="btn btn-secondary text-small trigger-quote" style="margin-top: auto; width: 100%;">Get a Quote</button>
+        </div>
+        
+        <div class="product-card">
+          <div class="icon">🏗️</div>
+          <h3>Cooling Tower</h3>
+          <p>High-efficiency cooling tower chemicals optimizing thermal output and minimizing deposits.</p>
+          <button class="btn btn-secondary text-small trigger-quote" style="margin-top: auto; width: 100%;">Get a Quote</button>
+        </div>
+        
+        <div class="product-card">
+          <div class="icon">🔥</div>
+          <h3>Boiler Chemicals</h3>
+          <p>Advanced oxygen scavengers and alkalinity builders to ensure safe, scalable boiler operations.</p>
+          <button class="btn btn-secondary text-small trigger-quote" style="margin-top: auto; width: 100%;">Get a Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section bg-light">
+    <div class="container fade-up">
+      <div class="text-center" style="margin-bottom: 4rem;">
+        <span class="section-label justify-center">Industrial Services</span>
+        <h2>Maintenance & Troubleshooting</h2>
+      </div>
+
+      <div class="grid grid-2 align-center" style="margin-bottom: 5rem;">
+        <img src="assets/images/services/hydrojet.jpg" alt="Hydrojet Cleaning" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" onerror="this.style.display='none'">
+        
+        <div style="padding: 0 2rem;">
+          <h3 style="color: var(--primary-700)">Hydrojet Cleaning Services</h3>
+          <p>High-pressure hydrojet cleaning for tanks, condensers, reactors, and industrial surfaces. We utilize premium pumps powered by flame-proof motors.</p>
+          <ul style="margin-bottom: 2rem; color: var(--steel-dark);">
+            <li class="d-flex align-center gap-1" style="margin-bottom: 0.8rem;"><span style="color:var(--primary-500)">✔️</span> Pressure up to 520 BAR</li>
+            <li class="d-flex align-center gap-1" style="margin-bottom: 0.8rem;"><span style="color:var(--primary-500)">✔️</span> 22 Ltrs/hr Flow Rate</li>
+            <li class="d-flex align-center gap-1"><span style="color:var(--primary-500)">✔️</span> Enhanced Safety Protocols</li>
+          </ul>
+          <button class="btn btn-primary trigger-quote">Request Service</button>
+        </div>
+      </div>
+
+      <div class="grid grid-2 align-center">
+        <div style="order: 2;">
+          <img src="assets/images/services/consultancy.jpg" alt="Consultancy" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" onerror="this.style.display='none'">
+        </div>
+        <div style="order: 1; padding: 0 2rem;">
+          <h3 style="color: var(--primary-700)">Consultancy & Testing</h3>
+          <p>Rigorous testing on microbial and chemical parameters across solid, semi-solid, and liquid material states. We identify issues at the molecular level before they affect plant productivity.</p>
+          <button class="btn btn-secondary trigger-quote" style="margin-top: 1rem;">Enquire Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid-4">
+      <div>
+        <h3 style="color: var(--white); font-size: 1.5rem;">TANUSH ENTERPRISES</h3>
+        <p style="color: var(--steel-light); font-size: 0.95rem;">Modern, technically-capable water treatment partner for Maharashtra's industrial belt.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4 style="color: var(--primary-300); font-size: 1rem;">Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+      </div>
+      
+      <div class="footer-links">
+        <h4 style="color: var(--primary-300); font-size: 1rem;">Products</h4>
+        <a href="#products">Boiler Chemicals</a>
+        <a href="#products">Cooling Tower Chemicals</a>
+        <a href="#products">R.O. Chemicals</a>
+      </div>
+      
+      <div>
+        <h4 style="color: var(--primary-300); font-size: 1rem;">Contact Us</h4>
+        <p style="margin-bottom: 0.5rem; color: var(--steel-light);">A/p. Lote, Tal. Khed<br>Dist. Ratnagiri 415722</p>
+        <p style="margin-bottom: 0.5rem; color: var(--white);"><strong>📞 9049962176</strong></p>
+        <p style="color: var(--steel-light); word-break: break-all;">tanushenterprises1986@gmail.com</p>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>© 2024 Tanush Enterprises. All Rights Reserved.</p>
+      <p class="mono-text">GST No. 27BLHPC0957K1ZZ</p>
+    </div>
+  </footer>
+
+  <!-- Get a Quote Modal -->
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h2 style="margin-bottom: 0.5rem;">Get a Quote</h2>
+      <p style="margin-bottom: 2rem;">Fill out the form below and our team will get back to you within 24 hours.</p>
+      
+      <form class="contact-form" id="enquiryForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required placeholder="John Doe">
+        
+        <label for="company">Company Name *</label>
+        <input type="text" id="company" required placeholder="ABC Industries">
+        
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" required placeholder="+91 98765 43210">
+        
+        <label for="service">Interested In</label>
+        <select id="service">
+          <option>Water Treatment Chemicals</option>
+          <option>Boiler Chemicals</option>
+          <option>Cooling Tower Chemicals</option>
+          <option>Hydrojet Cleaning Services</option>
+          <option>Consultancy</option>
+          <option>Other</option>
+        </select>
+        
+        <label for="message">Your Requirements</label>
+        <textarea id="message" rows="3" placeholder="Tell us about what you need..."></textarea>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

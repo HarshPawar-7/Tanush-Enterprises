@@ -1,0 +1,217 @@
+/* 
+  Tanush Enterprises - Main Stylesheet (Modern Aqua Light)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Primary - Deep Cobalt / Ocean Blues */
+  --primary-900: #0f172a;      /* Very dark blue for primary text headings */
+  --primary-700: #1e3a8a;      /* Deep Cobalt - for strong accents and footer */
+  --primary-500: #2563eb;      /* Bright Blue - links, secondary highlights */
+  --primary-300: #60a5fa;      /* Soft Blue */
+
+  /* Secondary / Clean Greys */
+  --steel-dark: #334155;       /* Slate dark - readabe body text */
+  --steel-mid: #64748b;        /* Slate mid - secondary text */
+  --steel-light: #94a3b8;      /* Borders, muted icons */
+
+  /* Accent - Vibrant Aqua / Cyan */
+  --accent-teal: #06b6d4;      /* Electric Cyan - primary buttons, hover states */
+  --accent-cyan: #cffafe;      /* Pale Cyan - subtle backgrounds, tags */
+  --accent-orange: #f59e0b;    /* Warm Amber - for warning/industrial pop if needed */
+
+  /* Neutrals - The Light Theme Core */
+  --white: #ffffff;
+  --off-white: #f8fafc;        /* Slate 50 - extremely light grey for section contrast */
+  --gray-100: #f1f5f9;
+  --gray-300: #cbd5e1;
+  --gray-600: #475569;
+  --dark-text: #0f172a;
+
+  /* Semantic */
+  --success: #10b981;
+  --danger: #ef4444;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;  
+  --font-body: 'DM Sans', sans-serif;               
+  --font-mono: 'JetBrains Mono', monospace;         
+
+  /* Scale */
+  --text-hero:   clamp(2.5rem, 6vw, 4.5rem);
+  --text-h1:     clamp(2rem, 4vw, 3.5rem);
+  --text-h2:     clamp(1.5rem, 3vw, 2.25rem);
+  --text-h3:     1.25rem;
+  --text-body:   1.05rem;
+  --text-sm:     0.9rem;
+  --text-xs:     0.75rem;
+
+  /* Layout */
+  --max-width: 1200px;
+}
+
+/* ========================================================================= */
+/* CSS RESET & BASE STYLES */
+/* ========================================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; 
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--steel-dark);
+  background-color: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-900);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--steel-mid);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-500);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-teal);
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================================================= */
+/* UTILITY CLASSES */
+/* ========================================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.bg-dark {
+  background-color: var(--primary-700);
+  color: var(--white);
+}
+
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4 {
+  color: var(--white);
+}
+
+.bg-dark p {
+  color: var(--accent-cyan);
+}
+
+.bg-light {
+  background-color: var(--off-white);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--accent-teal);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+.gap-3 { gap: 1.5rem; }
+.gap-4 { gap: 2rem; }
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Typography Utilities */
+.mono-text {
+  font-family: var(--font-mono);
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}
+
+/* Animations Trigger Classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
