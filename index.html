@@ -142,8 +142,10 @@
         </div>
     </div>
 
+</nav>
+
     <!-- Mobile Menu Drawer -->
-    <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl z-[100] translate-x-full transition-transform duration-300 flex flex-col p-8">
+    <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-slate-900 z-[9999] translate-x-full transition-transform duration-300 flex flex-col p-8">
         <div class="flex justify-between items-center mb-12">
             <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">Tanush Enterprises</span>
             <button id="closeMobileMenu" class="text-slate-800 dark:text-slate-200 focus:outline-none">
@@ -162,7 +164,6 @@
         </div>
     </div>
 
-</nav>
 
 <main class="pt-20">
     <!-- Hero Section -->
@@ -206,14 +207,15 @@
     <section class="bg-inverse-surface py-10 overflow-hidden">
         <div class="max-w-screen-2xl mx-auto px-8">
             <p class="text-center text-outline-variant text-xs font-mono mb-8 uppercase tracking-[0.3em]">Authorized Channel Partner &amp; Trusted By</p>
-            <!-- Note: Clearbit logos dynamically load via API ensuring genuine brand representations -->
+            <!-- Logos: using reliable CDN sources -->
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <img alt="Vinati Organics" class="h-10 object-contain mix-blend-screen invert" src="https://logo.clearbit.com/vinatiorganics.com" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA7dQC6Kh1dhhUN5ckeifFF2RnXQd5jKVvuQBIY1s7ithmd8av3V4VD3Jj1_kYdF-PDhITDl79nnvF-jp7JQ9lzoDklwNmMvEEH6o9erhp_SlCRqrrr_Vw5aKpHa3wZmKdtQqpfd8tS2SBRzVM3SaXJCN7NqYpJ05rO4LkyC1vCMRZ42Fim6t3JZu2OC631upmUbYr74Tt4pHiXAvU5VXhxDWFQ_WFFuC0bF57Jp7B4Nix_WbvbL_Oigx0Uda4JfzKCncy1UlgypfO3'"/>
-                <img alt="Asian Paints" class="h-8 object-contain mix-blend-screen invert opacity-90" src="https://logo.clearbit.com/asianpaints.com" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDHx1npz69mVDav4j2zOn25Jo4HcBud8PHq8ZR2LNGRpGPSrsi6m4GnTXHYnyyJ6s5E8AF3SaokseLuRSXx_kWIedAlUgo419RWdbtRyqnR8K4eMmXht3hfllYGwfo2iVLYgBz34BvbN0WzbURMFa16TuPcJSD2rWyMvgOcdWPnH9tSCwG7APzpMDmyLSHdybR-o7QzSU-UrBbcF00YIl7qhU7E5xn1ePPQqrE7gdgg_L6PFV-XTeq00exFMap1f1G_319COiLb4T53'"/>
-                <img alt="Castrol" class="h-12 object-contain" src="https://logo.clearbit.com/castrol.com" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA0TT4ATDORcqMvhu1oU1VAuJ4kQKCw-lt6Dr92cYxo_wauuKN4BA-NBhvs8i3xqvLd0cVLQXr1JmKv_Y_7szUhWT53kSQ6Pxmn0YBdsevyvfAEmAlDhBm5gPSX-Ei9_7WGNe4Cvyeq5koaoPrEhQI_O2_a4vM3WHY8N7RJlcvgVpJec9EESXbMx3e7M08e0ZoFG8fkGq92aIp3rV3qtGWAMGEdp4QOeBcbAJ293tzFO75S0Z11lqOP0fNDBKxMI-WbRxUwKuwfr-Jb'"/>
-                <img alt="Deepak Novochem" class="h-10 object-contain mix-blend-screen invert opacity-90" src="https://logo.clearbit.com/deepaknitrite.com" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuChXmQct3Cv5DMgaGvbA9l4g_zOlp18FQrkq6YbyuxjpwaNKr09WAnppDljQY8Gv2BUgmBjZWJ8kE6wMAyTt_84HgrKR08y9KxmG254GITRgj5RF9r91Li3rg3CcFGrJ20_gKny6Lfse1n7m_3sJQ_e782dZ1CvsEf4EgDGmn3IISe-cRttpJ8aaOl-StDo2U8JucJ8x8C_qFAn01Lp5wUDeRvLRmBEejiVfrCYnX9gwz7IRVOz-T4SHyYkTT-5L3O65F3JYrbNvRIE'"/>
-                <img alt="Chembond" class="h-10 object-contain mix-blend-screen invert opacity-90" src="https://logo.clearbit.com/chembondindia.com" onerror="this.style.display='none'"/>
-                <img alt="Supriya Lifescience" class="h-10 object-contain mix-blend-screen invert opacity-90" src="https://logo.clearbit.com/supriyalifescience.com" onerror="this.style.display='none'"/>
+                <img alt="Vinati Organics" class="h-10 object-contain mix-blend-screen invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7dQC6Kh1dhhUN5ckeifFF2RnXQd5jKVvuQBIY1s7ithmd8av3V4VD3Jj1_kYdF-PDhITDl79nnvF-jp7JQ9lzoDklwNmMvEEH6o9erhp_SlCRqrrr_Vw5aKpHa3wZmKdtQqpfd8tS2SBRzVM3SaXJCN7NqYpJ05rO4LkyC1vCMRZ42Fim6t3JZu2OC631upmUbYr74Tt4pHiXAvU5VXhxDWFQ_WFFuC0bF57Jp7B4Nix_WbvbL_Oigx0Uda4JfzKCncy1UlgypfO3" onerror="this.style.display='none'"/>
+                <img alt="Asian Paints" class="h-8 object-contain mix-blend-screen invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHx1npz69mVDav4j2zOn25Jo4HcBud8PHq8ZR2LNGRpGPSrsi6m4GnTXHYnyyJ6s5E8AF3SaokseLuRSXx_kWIedAlUgo419RWdbtRyqnR8K4eMmXht3hfllYGwfo2iVLYgBz34BvbN0WzbURMFa16TuPcJSD2rWyMvgOcdWPnH9tSCwG7APzpMDmyLSHdybR-o7QzSU-UrBbcF00YIl7qhU7E5xn1ePPQqrE7gdgg_L6PFV-XTeq00exFMap1f1G_319COiLb4T53" onerror="this.style.display='none'"/>
+                <img alt="Castrol" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0TT4ATDORcqMvhu1oU1VAuJ4kQKCw-lt6Dr92cYxo_wauuKN4BA-NBhvs8i3xqvLd0cVLQXr1JmKv_Y_7szUhWT53kSQ6Pxmn0YBdsevyvfAEmAlDhBm5gPSX-Ei9_7WGNe4Cvyeq5koaoPrEhQI_O2_a4vM3WHY8N7RJlcvgVpJec9EESXbMx3e7M08e0ZoFG8fkGq92aIp3rV3qtGWAMGEdp4QOeBcbAJ293tzFO75S0Z11lqOP0fNDBKxMI-WbRxUwKuwfr-Jb" onerror="this.style.display='none'"/>
+                <img alt="Deepak Novochem" class="h-10 object-contain mix-blend-screen invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChXmQct3Cv5DMgaGvbA9l4g_zOlp18FQrkq6YbyuxjpwaNKr09WAnppDljQY8Gv2BUgmBjZWJ8kE6wMAyTt_84HgrKR08y9KxmG254GITRgj5RF9r91Li3rg3CcFGrJ20_gKny6Lfse1n7m_3sJQ_e782dZ1CvsEf4EgDGmn3IISe-cRttpJ8aaOl-StDo2U8JucJ8x8C_qFAn01Lp5wUDeRvLRmBEejiVfrCYnX9gwz7IRVOz-T4SHyYkTT-5L3O65F3JYrbNvRIE" onerror="this.style.display='none'"/>
+                <!-- Chembond & Supriya: styled text badges as reliable fallback -->
+                <span class="font-industrial font-bold text-xl text-white/80 tracking-widest" title="Chembond Clean Water Technologies">CHEMBOND</span>
+                <span class="font-industrial font-bold text-xl text-white/80 tracking-widest" title="Supriya Lifescience">SUPRIYA</span>
             </div>
         </div>
     </section>
