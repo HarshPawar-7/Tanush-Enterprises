@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Clients | Tanush Enterprises</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#b3ebff", "outline-variant": "#c2c6d4", "outline": "#727783", "surface-container-high": "#daeafe", "inverse-surface": "#233241", "primary-fixed": "#d6e3ff", "tertiary": "#803a00", "surface-container-low": "#edf4ff", "error": "#ba1a1a", "surface-dim": "#ccdcf0", "secondary-container": "#50d9fe", "on-tertiary": "#ffffff", "surface-container-highest": "#d4e4f8", "surface-variant": "#d4e4f8", "on-background": "#0d1d2b", "surface-container": "#e3efff", "on-primary": "#ffffff", "primary-container": "#1565c0", "primary": "#004d99", "background": "#f7f9ff", "on-surface": "#0d1d2b", "inverse-on-surface": "#e8f1ff", "surface": "#f7f9ff", "secondary": "#00677d", "surface-container-lowest": "#ffffff" }, "fontFamily": { "headline": ["Space Grotesk"], "body": ["Manrope"], "label": ["Inter"], "industrial": ["Barlow Condensed"], "mono": ["JetBrains Mono"] } }, }, }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary selection:text-white">
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 dark:bg-slate-950/60 backdrop-blur-xl shadow-sm dark:shadow-none">
+    <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
+        <a href="/" class="text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">Tanush Enterprises</a>
+        <div class="hidden md:flex gap-6 lg:gap-8 items-center text-sm font-medium z-50">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/">Home</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/about.html">About Us</a>
+            <div class="relative group">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer" href="/products.html">Products <span class="material-symbols-outlined text-[1rem]">expand_more</span></a>
+                <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-max flex flex-col py-2">
+                    <a href="/products.html#boiler" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Boiler Chemicals</a>
+                    <a href="/products.html#cooling-tower" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Cooling Tower Chemicals</a>
+                </div>
+            </div>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer" href="/services.html">Services</a>
+            <a class="text-blue-700 dark:text-blue-300 border-b-2 border-blue-700 dark:border-blue-300 pb-1" href="/clients.html">Clients</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/certifications.html">Certifications</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-6">
+            <button class="trigger-quote hidden md:inline-flex industrial-gradient text-white px-6 py-2 rounded-lg font-bold text-sm">
+                Get a Quote
+            </button>
+            <button id="mobileMenuBtn" class="md:hidden flex items-center justify-center text-slate-800 dark:text-slate-200 z-[60] p-1">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl z-[100] translate-x-full transition-transform duration-300 flex flex-col p-8">
+        <div class="flex justify-between items-center mb-12">
+            <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">Tanush Enterprises</span>
+            <button id="closeMobileMenu" class="text-slate-800 dark:text-slate-200 focus:outline-none">
+                <span class="material-symbols-outlined text-3xl flex">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl font-bold font-headline text-slate-800 dark:text-white">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <a href="/about.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">About Us</a>
+            <a href="/products.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Products</a>
+            <a href="/services.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Services</a>
+            <a href="/clients.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Clients</a>
+            <a href="/certifications.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Certifications</a>
+            <a href="/contact.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Contact Us</a>
+            <button class="trigger-quote mt-8 industrial-gradient text-white px-6 py-4 rounded-xl font-bold w-full shadow-lg">Get a Quote</button>
+        </div>
+    </div>
+
+</nav>
+
+<main class="pt-32 pb-24 bg-surface max-w-screen-xl mx-auto px-8 min-h-screen">
+    <div class="text-center mb-16">
+        <h1 class="font-industrial text-6xl font-bold text-primary uppercase">Our Trusted Clients</h1>
+        <p class="text-on-surface-variant font-mono mt-4">Proudly supplying some of the largest chemical facilities.</p>
+        <div class="h-1 w-24 bg-tertiary mx-auto mt-6"></div>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 items-center justify-center grayscale hover:grayscale-0 transition-grayscale duration-500 bg-white p-16 rounded-3xl shadow-sm border border-outline-variant/10">
+        <!-- Authorized Partners -->
+        <div class="flex flex-col items-center gap-4 col-span-2 md:col-span-4 lg:col-span-5 mb-8">
+            <h4 class="font-mono text-tertiary font-bold tracking-widest text-sm mb-4">AUTHORIZED CHANNEL PARTNERS</h4>
+            <div class="flex gap-12 items-center justify-center">
+                <img alt="Chembond Clean Water Tech Ltd." class="h-16 object-contain" src="https://logo.clearbit.com/chembondindia.com" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA7dQC6Kh1dhhUN5ckeifFF2RnXQd5jKVvuQBIY1s7ithmd8av3V4VD3Jj1_kYdF-PDhITDl79nnvF-jp7JQ9lzoDklwNmMvEEH6o9erhp_SlCRqrrr_Vw5aKpHa3wZmKdtQqpfd8tS2SBRzVM3SaXJCN7NqYpJ05rO4LkyC1vCMRZ42Fim6t3JZu2OC631upmUbYr74Tt4pHiXAvU5VXhxDWFQ_WFFuC0bF57Jp7B4Nix_WbvbL_Oigx0Uda4JfzKCncy1UlgypfO3'"/>
+                <img alt="Now Deal Technologies" class="h-12 object-contain" src="https://logo.clearbit.com/nowdeal.co.in" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuChXmQct3Cv5DMgaGvbA9l4g_zOlp18FQrkq6YbyuxjpwaNKr09WAnppDljQY8Gv2BUgmBjZWJ8kE6wMAyTt_84HgrKR08y9KxmG254GITRgj5RF9r91Li3rg3CcFGrJ20_gKny6Lfse1n7m_3sJQ_e782dZ1CvsEf4EgDGmn3IISe-cRttpJ8aaOl-StDo2U8JucJ8x8C_qFAn01Lp5wUDeRvLRmBEejiVfrCYnX9gwz7IRVOz-T4SHyYkTT-5L3O65F3JYrbNvRIE'"/>
+            </div>
+        </div>
+        
+        <div class="col-span-2 md:col-span-4 lg:col-span-5 border-t border-outline-variant/20 pt-8 mt-4">
+            <h4 class="font-mono text-outline font-bold tracking-widest text-sm mb-12 text-center">ESTEEMED CLIENTS</h4>
+        </div>
+        
+        <img alt="Vinati Organics" class="h-12 w-full object-contain mix-blend-multiply" src="https://logo.clearbit.com/vinatiorganics.com"/>
+        <img alt="Deepak Novochem" class="h-10 w-full object-contain mix-blend-multiply" src="https://logo.clearbit.com/deepaknitrite.com"/>
+        <img alt="Supriya Lifescience" class="h-10 w-full object-contain mix-blend-multiply" src="https://logo.clearbit.com/supriyalifescience.com"/>
+        <img alt="Asian Paints" class="h-10 w-full object-contain mix-blend-multiply" src="https://logo.clearbit.com/asianpaints.com"/>
+        <img alt="Castrol" class="h-12 w-full object-contain" src="https://logo.clearbit.com/castrol.com"/>
+        <img alt="SPAK Orgochem" class="h-10 w-full object-contain opacity-60" src="https://logo.clearbit.com/spakorgochem.com" onerror="this.style.display='none'"/>
+        <img alt="Ken Chemicals" class="h-10 w-full object-contain opacity-60" src="https://logo.clearbit.com/kenchemicals.com" onerror="this.style.display='none'"/>
+        <img alt="Maharashtra Esters" class="h-10 w-full object-contain opacity-60" src="https://logo.clearbit.com/maharashtraesters.com" onerror="this.style.display='none'"/>
+    </div>
+</main>
+
+<footer class="bg-slate-900 dark:bg-black w-full border-t border-slate-800">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+        <div class="space-y-6">
+            <div class="text-xl font-bold text-white font-headline">Tanush Enterprises</div>
+            <p class="text-slate-400 text-sm leading-relaxed font-body">Premium Supplier of Water Treatment Chemicals & Services.</p>
+        </div>
+        <div>
+            <h5 class="font-industrial text-orange-500 font-bold mb-6 uppercase tracking-wider">Contact Info</h5>
+            <div class="space-y-4 font-mono text-sm">
+                <p class="text-slate-400 flex gap-3"><span class="material-symbols-outlined text-orange-400 text-sm">location_on</span> Regd. Office: A/p. Lote, Tal. Khed, Dist. Ratnagiri 415722</p>
+                <p class="text-slate-400 flex gap-3"><span class="material-symbols-outlined text-orange-400 text-sm">call</span> +91 9049962176, 7821942109</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="quoteModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[9999] opacity-0 invisible transition-all duration-300 flex items-center justify-center p-4">
+    <div class="bg-surface rounded-2xl w-full max-w-lg shadow-2xl relative translate-y-4 transition-transform duration-300 transform scale-95" id="modalContent">
+        <button id="closeModal" class="absolute top-4 right-4 text-outline hover:text-error transition-colors"><span class="material-symbols-outlined text-2xl">close</span></button>
+        <div class="p-8"><form id="enquiryForm" class="space-y-4"><input type="text" class="w-full rounded-xl px-4 py-3"><button type="submit" class="w-full industrial-gradient text-white p-4">Submit</button></form></div>
+    </div>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

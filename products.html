@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Products | Tanush Enterprises</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#b3ebff", "outline-variant": "#c2c6d4", "outline": "#727783", "surface-container-high": "#daeafe", "inverse-surface": "#233241", "primary-fixed": "#d6e3ff", "tertiary": "#803a00", "surface-container-low": "#edf4ff", "error": "#ba1a1a", "surface-dim": "#ccdcf0", "secondary-container": "#50d9fe", "on-tertiary": "#ffffff", "surface-container-highest": "#d4e4f8", "surface-variant": "#d4e4f8", "on-background": "#0d1d2b", "surface-container": "#e3efff", "on-primary": "#ffffff", "primary-container": "#1565c0", "primary": "#004d99", "background": "#f7f9ff", "on-surface": "#0d1d2b", "inverse-on-surface": "#e8f1ff", "surface": "#f7f9ff", "secondary": "#00677d", "surface-container-lowest": "#ffffff" }, "fontFamily": { "headline": ["Space Grotesk"], "body": ["Manrope"], "label": ["Inter"], "industrial": ["Barlow Condensed"], "mono": ["JetBrains Mono"] } }, }, }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary selection:text-white">
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 dark:bg-slate-950/60 backdrop-blur-xl shadow-sm dark:shadow-none">
+    <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
+        <a href="/" class="text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">Tanush Enterprises</a>
+        <div class="hidden md:flex gap-6 lg:gap-8 items-center text-sm font-medium z-50">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/">Home</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/about.html">About Us</a>
+            <div class="relative group">
+                <a class="text-blue-700 dark:text-blue-300 border-b-2 border-blue-700 dark:border-blue-300 pb-1 flex items-center gap-1 cursor-pointer" href="/products.html">Products <span class="material-symbols-outlined text-[1rem]">expand_more</span></a>
+                <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-max flex flex-col py-2">
+                    <a href="#water-treatment" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Water Treatment Chemicals</a>
+                    <a href="#cooling-tower" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Cooling Tower Chemicals</a>
+                    <a href="#boiler" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Boiler Chemicals</a>
+                    <a href="#etp" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">ETP Chemicals</a>
+                    <a href="#ro" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">R.O. Chemicals</a>
+                    <a href="#industrial" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Industrial Chemicals</a>
+                    <a href="#stp" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">STP Chemicals & Equipments</a>
+                    <a href="#sewage" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Sewage Treatment Chemicals</a>
+                    <a href="#lab" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Lab Chemicals & Equipments</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1 cursor-pointer" href="/services.html">Services <span class="material-symbols-outlined text-[1rem]">expand_more</span></a>
+                <div class="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-max flex flex-col py-2">
+                    <a href="/services.html#hydrojet" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Hydrojet Cleaning</a>
+                    <a href="/services.html#cooling-fins" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Cooling Tower Fins Cleaning</a>
+                    <a href="/services.html#descaling" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Descaling Services</a>
+                    <a href="/services.html#consultancy" class="px-4 py-2 hover:bg-slate-50 text-slate-700 transition">Consultancy & Troubleshooting</a>
+                </div>
+            </div>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/clients.html">Clients</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/certifications.html">Certifications</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-6">
+            <div class="hidden lg:flex items-center gap-2 text-primary font-mono text-sm">
+                <span class="material-symbols-outlined text-base">phone_in_talk</span>
+                +91 9049962176
+            </div>
+            <button class="trigger-quote hidden md:inline-flex industrial-gradient text-white px-6 py-2 rounded-lg font-bold text-sm hover:scale-98 transition-all duration-300 shadow-lg shadow-tertiary/20">
+                Get a Quote
+            </button>
+            <button id="mobileMenuBtn" class="md:hidden flex items-center justify-center text-slate-800 dark:text-slate-200 z-[60] p-1">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl z-[100] translate-x-full transition-transform duration-300 flex flex-col p-8">
+        <div class="flex justify-between items-center mb-12">
+            <span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">Tanush Enterprises</span>
+            <button id="closeMobileMenu" class="text-slate-800 dark:text-slate-200 focus:outline-none">
+                <span class="material-symbols-outlined text-3xl flex">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl font-bold font-headline text-slate-800 dark:text-white">
+            <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+            <a href="/about.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">About Us</a>
+            <a href="/products.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Products</a>
+            <a href="/services.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Services</a>
+            <a href="/clients.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Clients</a>
+            <a href="/certifications.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Certifications</a>
+            <a href="/contact.html" class="hover:text-blue-600 transition-colors border-b border-outline-variant/20 pb-2">Contact Us</a>
+            <button class="trigger-quote mt-8 industrial-gradient text-white px-6 py-4 rounded-xl font-bold w-full shadow-lg">Get a Quote</button>
+        </div>
+    </div>
+
+</nav>
+
+<main class="pt-32 pb-24 bg-surface">
+    <div class="max-w-screen-2xl mx-auto px-8">
+        <div class="text-center mb-16">
+            <h1 class="font-industrial text-6xl font-bold text-primary uppercase">Our Products</h1>
+            <p class="text-on-surface-variant font-mono mt-4">TECHNICAL SOLUTIONS FOR EVERY STAGE OF THE WATER CYCLE</p>
+            <div class="h-1 w-24 bg-tertiary mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1 Boiler -->
+            <div id="boiler" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Boiler Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Boiler water treatment is a type of industrial water treatment focused on removal or chemical modification of substances potentially damaging to the boiler. Various types of treatment are used at different location to avoid scale corrosion & deposition.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 2 Cooling Tower -->
+            <div id="cooling-tower" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">severe_cold</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Cooling Tower Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">These chemicals used in cooling tower water treatment are ideal for cooling water cleaning & include scale inhibitor, corrosion inhibitors & bio dispersant & biocide to control scaling, corrosion, microbiological growth control, remove algae within heat exchange water circuit.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 3 ETP -->
+            <div id="etp" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">recycling</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">ETP Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">All these Effluent treatment chemicals are used for secondary settlling & sludge dewatering as well as for primary consultants such as alum, PAC, Ferric Chlorite, Ferrous Sulphate etc are used.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 4 RO -->
+            <div id="ro" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">R.O. Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Advanced antiscalants and cleaners designed specifically for Reverse Osmosis membrane protection and efficiency maximization.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 5 Water Treatment -->
+            <div id="water-treatment" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">waves</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Water Treatment Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">A broad spectrum of specialized formulations required to convert municipal or ground water into precise, high-grade process water.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 6 STP -->
+            <div id="stp" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">factory</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">STP Chemicals & Equipments</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Optimized bio-cultures and hardware geared to ensure your Sewage Treatment Plant meets all biological oxygen demand and regulatory parameters.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 7 Sewage -->
+            <div id="sewage" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">delete_sweep</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Sewage Treatment Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Highly effective coagulants and deodorizers built specifically for intensive sewage processing and volume reduction.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 8 Industrial -->
+            <div id="industrial" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-secondary mb-4" style="font-variation-settings: 'FILL' 1;">science</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Industrial Chemicals</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Bulk raw chemical compounds spanning various concentrations to support generalized plant processes and cleaning mechanisms.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+            
+            <!-- 9 Lab -->
+            <div id="lab" class="bg-surface-container-highest p-8 rounded-2xl shadow-sm border border-outline-variant/20 hover:shadow-lg transition-shadow">
+                <span class="material-symbols-outlined text-4xl text-tertiary mb-4" style="font-variation-settings: 'FILL' 1;">biotech</span>
+                <h4 class="font-industrial text-3xl font-bold uppercase mb-3">Lab Chemicals & Equipments</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">In-house laboratory test kits, reagents, and metering hardware necessary for you to independently verify parameters daily.</p>
+                <button class="trigger-quote text-primary font-bold text-sm hover:translate-x-1 transition-transform flex items-center gap-1">Enquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-slate-900 dark:bg-black w-full border-t border-slate-800">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+        <div class="space-y-6">
+            <div class="text-xl font-bold text-white font-headline">Tanush Enterprises</div>
+            <p class="text-slate-400 text-sm leading-relaxed font-body">Premium Supplier of Water Treatment Chemicals & Services.</p>
+        </div>
+        <div>
+            <h5 class="font-industrial text-orange-500 font-bold mb-6 uppercase tracking-wider">Product Lines</h5>
+            <ul class="space-y-4">
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/products.html#boiler">Boiler Chemicals</a></li>
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/products.html#cooling-tower">Cooling Tower Chemicals</a></li>
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/products.html#ro">RO Antiscalants</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-industrial text-orange-500 font-bold mb-6 uppercase tracking-wider">Services</h5>
+            <ul class="space-y-4">
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/services.html#hydrojet">Hydrojet Cleaning</a></li>
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/services.html#descaling">Descaling Services</a></li>
+                <li><a class="text-slate-400 hover:text-white transition-all inline-block text-sm" href="/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-industrial text-orange-500 font-bold mb-6 uppercase tracking-wider">Contact Info</h5>
+            <div class="space-y-4 font-mono text-sm">
+                <p class="text-slate-400 flex gap-3"><span class="material-symbols-outlined text-orange-400 text-sm">location_on</span> Regd. Office: A/p. Lote, Tal. Khed, Dist. Ratnagiri 415722</p>
+                <p class="text-slate-400 flex gap-3"><span class="material-symbols-outlined text-orange-400 text-sm">call</span> +91 9049962176, 7821942109</p>
+                <p class="text-slate-400 flex gap-3"><span class="material-symbols-outlined text-orange-400 text-sm">mail</span> tanushenterprises1986@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="quoteModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[9999] opacity-0 invisible transition-all duration-300 flex items-center justify-center p-4">
+    <div class="bg-surface rounded-2xl w-full max-w-lg shadow-2xl relative translate-y-4 transition-transform duration-300 transform scale-95" id="modalContent">
+        <button id="closeModal" class="absolute top-4 right-4 text-outline hover:text-error transition-colors">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+        <div class="p-8">
+            <h3 class="font-industrial text-3xl font-bold text-on-surface mb-2 tracking-tight">Request a Quote</h3>
+            <form id="enquiryForm" class="space-y-4 mt-6">
+                <div><input type="text" required class="w-full rounded-xl border-outline-variant bg-white px-4 py-3" placeholder="Full Name"></div>
+                <div><input type="tel" required class="w-full rounded-xl border-outline-variant bg-white px-4 py-3" placeholder="Phone *"></div>
+                <button type="submit" class="w-full mt-4 industrial-gradient text-white font-bold py-4 rounded-xl">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
